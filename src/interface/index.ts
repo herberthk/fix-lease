@@ -32,3 +32,14 @@ export interface ImgProps {
   title: string;
   id: number;
 }
+
+export type RoomType = {
+  tittle: string;
+  img: string;
+  sqm: string;
+  people: string;
+  room: string;
+  text: string;
+  cost: string;
+  id: number;
+};

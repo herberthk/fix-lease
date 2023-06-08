@@ -1,3 +1,4 @@
+"use client";
 import React, { Component } from "react";
 import Box from "@mui/material/Box";
 import ImageList from "@mui/material/ImageList";
@@ -13,8 +14,9 @@ export default class Hero extends Component {
       <Box display="flex" flexDirection="column" mx={1} gap={3}>
         <Box width="100%">
           <ImageList
-            sx={{ width: "auto", height: 320 }}
+            rowHeight="auto"
             cols={4}
+            // variant={matchDownMd ? "masonry" : "quilted"}
             variant="quilted"
             gap={6}
           >

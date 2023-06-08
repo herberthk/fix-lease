@@ -9,9 +9,9 @@ import WatchLaterSharpIcon from "@mui/icons-material/WatchLaterSharp";
 import ContactMailIcon from "@mui/icons-material/ContactMail";
 import BathroomIcon from "@mui/icons-material/Bathroom";
 import AirIcon from "@mui/icons-material/Air";
-import Image from "next/image";
 import Stack from "@mui/material/Stack";
 import { IState, TabPanelProps } from "@/interface";
+import MapComponent from "./Map";
 
 const a11yProps = (index: number) => {
   return {
@@ -51,7 +51,7 @@ class Overview extends Component {
             direction={{ md: "row", sm: "column" }}
             spacing={{ md: 4, xs: 1 }}
           >
-            <Box display="flex" flexDirection="column" mt={2} gap={1}>
+            <Box display="flex" flexDirection="column" mt={2} gap={4}>
               <Box display="flex" gap={2}>
                 <WifiOutlinedIcon />
                 <Typography>Free wifi</Typography>
@@ -69,7 +69,7 @@ class Overview extends Component {
                 <Typography>Key card access</Typography>
               </Box>
             </Box>
-            <Box display="flex" flexDirection="column" mt={2} gap={1}>
+            <Box display="flex" flexDirection="column" mt={2} gap={4}>
               <Box display="flex" gap={2}>
                 <LocalParkingSharpIcon />
                 <Typography>Free Parking</Typography>
@@ -80,13 +80,8 @@ class Overview extends Component {
               </Box>
             </Box>
           </Stack>
-          <Stack
-            direction="column"
-            position="relative"
-            width={{ md: 240, xs: "100%" }}
-            height={{ md: 140, xs: 180 }}
-          >
-            <Image src="/assets/map.jpg" alt="map" fill />
+          <Stack direction="column">
+            <MapComponent lat={-3.745} lng={-38.523} />
           </Stack>
         </Box>
       </>

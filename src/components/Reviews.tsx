@@ -12,7 +12,12 @@ export default class Reviews extends Component {
         <Typography fontSize={18} fontWeight={700}>
           Reviews
         </Typography>
-        <Box display="flex" flexWrap="wrap" justifyContent="space-between">
+        <Box
+          display="flex"
+          flexWrap="wrap"
+          justifyContent="space-between"
+          gap={2}
+        >
           <Box display="flex" flexDirection="column" gap={3} width="310px">
             <Typography color="blue" mt={1} fontSize={20} fontWeight={700}>
               9.6/10
@@ -21,7 +26,7 @@ export default class Reviews extends Component {
               <Progress key={id} rating={rating} text={text} value={value} />
             ))}
           </Box>
-          <Box display="flex" flexDirection="column" gap={1}>
+          <Box display="flex" flexDirection="column" gap={2}>
             <Typography fontSize={16} fontWeight={700}>
               Excellent value for the price
             </Typography>
