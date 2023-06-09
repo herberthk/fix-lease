@@ -12,6 +12,8 @@ Install dependencies by running the following command
 ```bash
 npm install
 ```
+Create `.env` file in root directory, add environment variables found in `.env.example` and provide values to them.
+
 Run the development server:
 
 ```bash
