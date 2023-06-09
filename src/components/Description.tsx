@@ -98,7 +98,7 @@ export default class Description extends Component<any, IState> {
 
   render() {
     return (
-      <Box mx={1}>
+      <>
         <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
           <Tabs
             value={this.state.value}
@@ -126,7 +126,7 @@ export default class Description extends Component<any, IState> {
         <TabPanel value={this.state.value} index={3}>
           Policies
         </TabPanel>
-      </Box>
+      </>
     );
   }
 }

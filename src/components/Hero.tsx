@@ -11,7 +11,7 @@ import { listItem } from "@/app/data";
 export default class Hero extends Component {
   render() {
     return (
-      <Box display="flex" flexDirection="column" mx={1} gap={3}>
+      <Box display="flex" flexDirection="column" gap={3}>
         <Box width="100%">
           <ImageList
             rowHeight="auto"

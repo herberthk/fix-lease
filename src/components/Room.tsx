@@ -12,11 +12,11 @@ import { rooms } from "@/app/data";
 export default class Room extends Component {
   render() {
     return (
-      <Box mx={1}>
+      <>
         <Typography fontSize={18} fontWeight={700}>
           Rooms
         </Typography>
-        <Box display="flex" flexWrap="wrap" mt={1} gap={6}>
+        <Box display="flex" flexWrap="wrap" mt={1} gap={3}>
           {rooms.map(({ cost, id, img, people, room, sqm, text, tittle }) => (
             <Stack
               key={id}
@@ -26,12 +26,12 @@ export default class Room extends Component {
               boxShadow="0 0 20px rgba(0,0,0,0.2)"
               borderRadius={4}
               // width="290px"
-              width={{ xs: "100%", md: "290px" }}
+              width={{ xs: "100%", md: "270px" }}
             >
               <Stack
                 display="flex"
                 position="relative"
-                width={{ xs: "100%", md: "290px" }}
+                width={{ xs: "100%", md: "270px" }}
                 height={140}
               >
                 <Image
@@ -76,7 +76,7 @@ export default class Room extends Component {
             </Stack>
           ))}
         </Box>
-      </Box>
+      </>
     );
   }
 }

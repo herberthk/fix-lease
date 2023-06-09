@@ -4,11 +4,12 @@ import Typography from "@mui/material/Typography";
 import Progress from "./Progress";
 import CustomRating from "./Rating";
 import { progressData } from "@/app/data";
+import Stack from "@mui/material/Stack";
 
 export default class Reviews extends Component {
   render() {
     return (
-      <Box mx={1} mt={4} mb={2}>
+      <Box mt={4} mb={2}>
         <Typography fontSize={18} fontWeight={700}>
           Reviews
         </Typography>
@@ -18,14 +19,21 @@ export default class Reviews extends Component {
           justifyContent="space-between"
           gap={2}
         >
-          <Box display="flex" flexDirection="column" gap={3} width="310px">
+          <Stack
+            direction="column"
+            spacing={3}
+            width={{
+              xs: "100%",
+              md: "310px",
+            }}
+          >
             <Typography color="blue" mt={1} fontSize={20} fontWeight={700}>
               9.6/10
             </Typography>
             {progressData.map(({ rating, text, value, id }) => (
               <Progress key={id} rating={rating} text={text} value={value} />
             ))}
-          </Box>
+          </Stack>
           <Box display="flex" flexDirection="column" gap={2}>
             <Typography fontSize={16} fontWeight={700}>
               Excellent value for the price
