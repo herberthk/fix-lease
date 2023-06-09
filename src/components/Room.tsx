@@ -25,7 +25,14 @@ export default class Room extends Component {
               gap={1}
               boxShadow="0 0 20px rgba(0,0,0,0.2)"
               borderRadius={4}
-              // width="290px"
+              sx={{
+                transitionTimingFunction: "linear",
+                transition: "all",
+                transitionDuration: "500ms",
+                "&:hover": {
+                  transform: "translateY(-8px)",
+                },
+              }}
               width={{ xs: "100%", md: "270px" }}
             >
               <Stack
